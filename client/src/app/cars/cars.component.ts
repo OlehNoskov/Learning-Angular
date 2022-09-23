@@ -13,6 +13,8 @@ export class CarsComponent {
   // inputText2 = '';
   carName = '';
   carStatus = false;
+  arrayCars = ['Ford', 'BMW', 'AUDI'];
+  items = [{id: 3, name: 'item 1'},{id: 4, name: 'item 2'},{id: 5, name: 'item 3'}]
 
   constructor() {
   }
@@ -35,5 +37,8 @@ export class CarsComponent {
 
   addNewCar() {
     this.carStatus = true;
+    // добавляем в массиве один елемент
+    this.arrayCars.push(this.carName)
+    this.carName = '';
   }
 }

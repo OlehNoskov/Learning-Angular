@@ -20,8 +20,8 @@
 <!--<hr>-->
 
 <!--selector: '.app-car' в car.component-->
-<div class="app-car"></div>
-<hr>
+<!--<div class="app-car"></div>-->
+<!--<hr>-->
 
 <!--текст с поля ввода параллельно выводится и в параграфе ниже (2 способа)-->
 <!--<input type="text" class="form-control" (keyup)="onKeyUp($event)">-->
@@ -34,3 +34,15 @@
 <!--<input type="text" class="form-control" [(ngModel)]="inputText1">-->
 <!--<p>{{inputText1}}</p>-->
 <!--<hr>-->
+
+<!--вывод на экран массива названия машин-->
+<div class="app-car" *ngFor="let car of arrayCars"></div>
+<ul>
+  <!--вывод на экран массива обьектов-->
+  <li *ngFor="let item of items; let i = index">
+    <!--вывод на экран id обьекта и имени -->
+    <!--  <b>{{item.id}}</b> - <i>{{item.name}}</i>-->
+    <b>{{i + 1}}</b> - <i>{{item.name}}</i>
+  </li>
+</ul>
+<hr>
