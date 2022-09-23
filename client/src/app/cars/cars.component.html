@@ -4,14 +4,14 @@
 <!--<button [disabled]="!canAddCar" class="btn btn-success">Add new car</button>-->
 
 <!--вывод определенного текста с помощью булевого флага-->
-<input type="text" class="form-control" [(ngModel)]="carName">
-<button class="btn btn-success" (click)="addNewCar()">Add new car</button>
-<!--с помощью булевой переменной carStatus мы при нажатии кнопки меняем ввод нижнего поля -->
-<p *ngIf="!carStatus; else successStatus">New car did not add yet!</p>
-<ng-template #successStatus>
-  <p>New car add!</p>
-</ng-template>
-<hr>
+<!--<input type="text" class="form-control" [(ngModel)]="carName">-->
+<!--<button class="btn btn-success" (click)="addNewCar()">Add new car</button>-->
+<!--&lt;!&ndash;с помощью булевой переменной carStatus мы при нажатии кнопки меняем ввод нижнего поля &ndash;&gt;-->
+<!--<p *ngIf="!carStatus; else successStatus">New car did not add yet!</p>-->
+<!--<ng-template #successStatus>-->
+<!--  <p>New car add!</p>-->
+<!--</ng-template>-->
+<!--<hr>-->
 
 <!--появление текста ниже (addCarStatus) после нажатия на кнопку (2 способа)-->
 <!--<button class="btn btn-success" onclick="">Add new car</button>-->
@@ -63,13 +63,28 @@
 <!--<hr>-->
 
 <!--Применение пайпов {{date | date ('short','medium') }} (Трасформация вида выводы даты на экран)-->
-<ul>
-  <li *ngFor="let date of dates; let i = index">
-    <div>
-<!--      <b>{{i + 1}}</b> - {{date | date: 'medium'}}-->
-      <b>{{i + 1}}</b> - {{date | uppercase}}
-    </div>
-  </li>
-</ul>
-<hr>
+<!--<ul>-->
+<!--  <li *ngFor="let date of dates; let i = index">-->
+<!--    <div>-->
+<!--&lt;!&ndash;      <b>{{i + 1}}</b> - {{date | date: 'medium'}}&ndash;&gt;-->
+<!--      <b>{{i + 1}}</b> - {{date | uppercase}}-->
+<!--    </div>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<hr>-->
 
+
+<!--вывод элементов с помощью свойства binding-->
+<!--<input type="text" class="form-control" [ngModel]="carName">-->
+<!--<input type="text" class="form-control" [ngModel]="carYear">-->
+<!--<button class="btn btn-success" (click)="addCar()"> Add new car</button>-->
+<!--<hr>-->
+<!--<div class="app-car" *ngFor="let car of cars" [carItem]="car"></div>-->
+
+<!--подписываемся на событие-->
+<p>
+  Forms add new Car
+</p>
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
+<hr>
+<div class="app-car" *ngFor="let car of cars" [carItem]="car"></div>
