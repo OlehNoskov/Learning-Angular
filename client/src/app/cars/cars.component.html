@@ -1,7 +1,19 @@
 <!--// введение булевой переменной для блока кнопки-->
+
 <!--<button disabled="{{!canAddCar}}" class="btn btn-success">Add new car</button>-->
-<button [disabled]="!canAddCar" class="btn btn-success">Add new car</button>
+<!--<button [disabled]="!canAddCar" class="btn btn-success">Add new car</button>-->
+
+<!--появление текста ниже (addCarStatus) после нажатия на кнопку-->
+
+<!--<button class="btn btn-success" onclick="">Add new car</button>-->
+<button class="btn btn-success" (click)="addCar()">Add new car</button>
+
+<p>{{addCarStatus}}</p>
 <hr>
 <!--selector: '.app-car' в car.component-->
 <div class="app-car"></div>
 <div class="app-car"></div>
+
+<hr>
+
+
