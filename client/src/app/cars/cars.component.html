@@ -3,17 +3,34 @@
 <!--<button disabled="{{!canAddCar}}" class="btn btn-success">Add new car</button>-->
 <!--<button [disabled]="!canAddCar" class="btn btn-success">Add new car</button>-->
 
-<!--появление текста ниже (addCarStatus) после нажатия на кнопку-->
-
-<!--<button class="btn btn-success" onclick="">Add new car</button>-->
-<button class="btn btn-success" (click)="addCar()">Add new car</button>
-
-<p>{{addCarStatus}}</p>
+<!--вывод определенного текста с помощью булевого флага-->
+<input type="text" class="form-control" [(ngModel)]="carName">
+<button class="btn btn-success" (click)="addNewCar()">Add new car</button>
+<!--с помощью булевой переменной carStatus мы при нажатии кнопки меняем ввод нижнего поля -->
+<p *ngIf="!carStatus; else successStatus">New car did not add yet!</p>
+<ng-template #successStatus>
+  <p>New car add!</p>
+</ng-template>
 <hr>
+
+<!--появление текста ниже (addCarStatus) после нажатия на кнопку (2 способа)-->
+<!--<button class="btn btn-success" onclick="">Add new car</button>-->
+<!--<button class="btn btn-success" (click)="addCar()">Add new car</button>-->
+<!--<p>{{addCarStatus}}</p>-->
+<!--<hr>-->
+
 <!--selector: '.app-car' в car.component-->
 <div class="app-car"></div>
-<div class="app-car"></div>
-
 <hr>
 
+<!--текст с поля ввода параллельно выводится и в параграфе ниже (2 способа)-->
+<!--<input type="text" class="form-control" (keyup)="onKeyUp($event)">-->
+<!--<input type="text" class="form-control" #myInput (keyup)="onKeyUp1(myInput.value)">-->
+<!--<p>{{inputText1}}</p>-->
+<!--<hr>-->
 
+<!--текст с поля ввода выводится и в параграфе только после нажатия клавиши-->
+<!--<input type="text" class="form-control" #myInput (keyup)="onKeyUp1(myInput.value)">-->
+<!--<input type="text" class="form-control" [(ngModel)]="inputText1">-->
+<!--<p>{{inputText1}}</p>-->
+<!--<hr>-->
