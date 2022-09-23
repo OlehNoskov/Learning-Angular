@@ -35,14 +35,41 @@
 <!--<p>{{inputText1}}</p>-->
 <!--<hr>-->
 
+<!--<div class="app-car" *ngFor="let car of arrayCars"></div>-->
+<!--<ul>-->
+<!--  &lt;!&ndash;вывод на экран массива обьектов&ndash;&gt;-->
+<!--  <li *ngFor="let item of items; let i = index">-->
+<!--    &lt;!&ndash;вывод на экран id обьекта и имени &ndash;&gt;-->
+<!--    &lt;!&ndash;  <b>{{item.id}}</b> - <i>{{item.name}}</i>&ndash;&gt;-->
+<!--    <b>{{i + 1}}</b> - <i>{{item.name}}</i>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<hr>-->
+
 <!--вывод на экран массива названия машин-->
-<div class="app-car" *ngFor="let car of arrayCars"></div>
+<!--изменение цвета backgroundColor списка по четности индекса цикла (transparent -> оставить без изменений)-->
+<!--изменение цвета текста 'color' : 'white')-->
+<!---->
+<!--<ul>-->
+<!--  <li *ngFor="let car of arrayCars; let i = index">-->
+<!--    <div-->
+<!--      [ngStyle]="{backgroundColor: (i+1) %2 === 0 ? 'red' : 'green', 'color' : 'white'}"-->
+<!--      [ngClass]="{'big-text': setBigCarText(car)}"-->
+<!--    >-->
+<!--      <b>{{i + 1}}</b> - {{car}}-->
+<!--    </div>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<hr>-->
+
+<!--Применение пайпов {{date | date ('short','medium') }} (Трасформация вида выводы даты на экран)-->
 <ul>
-  <!--вывод на экран массива обьектов-->
-  <li *ngFor="let item of items; let i = index">
-    <!--вывод на экран id обьекта и имени -->
-    <!--  <b>{{item.id}}</b> - <i>{{item.name}}</i>-->
-    <b>{{i + 1}}</b> - <i>{{item.name}}</i>
+  <li *ngFor="let date of dates; let i = index">
+    <div>
+<!--      <b>{{i + 1}}</b> - {{date | date: 'medium'}}-->
+      <b>{{i + 1}}</b> - {{date | uppercase}}
+    </div>
   </li>
 </ul>
 <hr>
+

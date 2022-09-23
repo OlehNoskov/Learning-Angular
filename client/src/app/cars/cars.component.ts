@@ -13,8 +13,15 @@ export class CarsComponent {
   // inputText2 = '';
   carName = '';
   carStatus = false;
-  arrayCars = ['Ford', 'BMW', 'AUDI'];
-  items = [{id: 3, name: 'item 1'},{id: 4, name: 'item 2'},{id: 5, name: 'item 3'}]
+  arrayCars = ['FORD', 'BMW', 'AUDI', 'VAZ', 'OPEL', 'MAZDA'];
+  // items = [{id: 3, name: 'item 1'},{id: 4, name: 'item 2'},{id: 5, name: 'item 3'}]
+  dates = [
+    new Date(2015,3,4).toDateString(),
+    new Date(2010,4,26).toDateString(),
+    new Date(2000,5,20).toDateString(),
+    new Date(2002,6,10).toDateString()
+
+  ];
 
   constructor() {
   }
@@ -41,4 +48,12 @@ export class CarsComponent {
     this.arrayCars.push(this.carName)
     this.carName = '';
   }
+
+  // возвращает больше длина строки 4 символов
+  setBigCarText(car : string){
+    return car.length > 4
+  }
+
+
+
 }

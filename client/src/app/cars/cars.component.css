@@ -1,3 +1,7 @@
 div.app-car {
   margin-top: 10px;
 }
+
+.big-text {
+  font-size: 150%;
+}
