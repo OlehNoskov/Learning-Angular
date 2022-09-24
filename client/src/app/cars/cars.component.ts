@@ -1,9 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: '.app-cars',
   templateUrl: './cars.component.html',
-  styleUrls: ['./cars.component.css']
+  styleUrls: ['./cars.component.css'],
+  // Глобальный селектор стилей
+  encapsulation : ViewEncapsulation.None
 })
 export class CarsComponent {
   addCarStatus = '';
@@ -65,6 +67,8 @@ export class CarsComponent {
   // setBigCarText(car : string){
   //   return car.length > 4
   // }
+
+
 
 
 }

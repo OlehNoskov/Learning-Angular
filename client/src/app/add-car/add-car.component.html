@@ -1,3 +1,10 @@
-<input type="text" class="form-control" [ngModel]="carName">
-<input type="text" class="form-control" [ngModel]="carYear">
-<button class="btn btn-success" (click)="addCar()"> Add new car</button>
+<!--Способы получения данных из шаблона-->
+
+<!--<input type="text" class="form-control" [ngModel]="carName">-->
+<!--<input type="text" class="form-control" [ngModel]="carYear">-->
+
+<input type="text" class="form-control" #carNameInput>
+<input type="text" class="form-control" #carYearInput>
+<button class="btn btn-success" (click)="addCar(carNameInput)"> Add new car</button>
+
+
