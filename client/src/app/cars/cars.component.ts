@@ -5,20 +5,22 @@ import {Component, ViewEncapsulation} from '@angular/core';
   templateUrl: './cars.component.html',
   styleUrls: ['./cars.component.css'],
   // Глобальный селектор стилей
-  encapsulation : ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 export class CarsComponent {
   addCarStatus = '';
-  cars: [{ year: number; name: string }, { year: number; name: string }, { year: number; name: string }] = [
+  cars: [{ year: number; name: string }] = [
     {
       name: 'Ford',
       year: 2017
-    }, {
-      name: 'BMW',
-      year: 2020
-    }, {
-      name: 'AUDI',
-      year: 2021
+
+      // }, {
+      //   name: 'BMW',
+      //   year: 2020
+      // }, {
+      //   name: 'AUDI',
+      //   year: 2021
+      // }];
     }];
 
   constructor() {
@@ -69,6 +71,11 @@ export class CarsComponent {
   // }
 
 
+  changeCarName() {
+    this.cars[0].name = 'New car name!';
+  }
 
-
+  deleteCar() {
+    this.cars.splice(0,1);
+  }
 }

@@ -24,3 +24,34 @@ Learning Angular
 Пайпы -> специальные трансформеры, которые используются в HTML для трасформации данных (например дату (pipes))
 
 
+    ========== Life cycle component ==========
+
+  // call first
+  constructor();
+
+  // call second
+  ngOnInit(): void;
+  // call third (tracing state object)
+  ngOnChanges(changes: SimpleChanges): void;
+
+  // call fourth (do check)
+  ngDoCheck(): void;
+
+  // call fifth (init new data)
+  ngAfterContentInit(): void;
+
+  // call sixth (check content for new updates)
+  ngAfterContentChecked(): void;
+
+  // call seventh (call this method show that init already was initialization)
+  ngAfterViewInit(): void;
+
+  // call eighth (check current view)
+  ngAfterViewChecked(): void;
+
+  // kill component
+  ngOnDestroy(): void;
+
+
+
+
