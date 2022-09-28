@@ -146,33 +146,25 @@
 //   }
 // }
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CarService  } from "./services/car.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  //registration service in this class (1 way)
+  // providers: [CarService]
 })
-export class AppComponent {
-  cars = [
-    {
-      name: 'Ford',
-      isSold: false
-    },
-    {
-      name: 'Mazda',
-      isSold: true
-    },
-    {
-      name: 'Mercedes',
-      isSold: false
-    }
-  ];
+export class AppComponent implements OnInit {
+  cars = [];
 
-  addCarToList(carName: string) {
-    this.cars.push({
-      name: carName,
-      isSold: false
-    });
+  constructor(private carService: CarService) {
+  }
+
+
+  ngOnInit(): void {
+    // @ts-ignore
+    this.cars = this.carService.cars;
   }
 }

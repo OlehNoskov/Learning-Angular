@@ -10,6 +10,8 @@ import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { PowPipe } from "./pipes/pow.pipe";
 import { CarFilterPipe } from './pipes/car-filter.pipe';
 import { CarAddComponent } from './car-add/car-add.component';
+import { CarService } from "./services/car.service";
+import {ConsoleService} from "./services/console.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { CarAddComponent } from './car-add/car-add.component';
         BrowserModule,
         FormsModule
     ],
-  providers: [],
+  // registration services in this place, one instance to whole project (singleton)
+  providers: [CarService, ConsoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

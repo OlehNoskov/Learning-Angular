@@ -91,14 +91,15 @@
 
 
 import { Component, Input } from '@angular/core';
-import { ConsoleService } from "../console.service";
+import { ConsoleService } from "../services/console.service";
 
 @Component({
   selector: 'app-car',
   templateUrl: './car.component.html',
   styleUrls: ['./car.component.css'],
-  //registration service in this class (1 way)
-  providers: [ConsoleService]
+  //registration service in this class
+  // providers: [ConsoleService]
+
 })
 export class CarComponent {
   // @ts-ignore
