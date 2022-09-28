@@ -9,6 +9,7 @@ import { BackgroundDirective } from './directives/backgroung.directive';
 import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { PowPipe } from "./pipes/pow.pipe";
 import { CarFilterPipe } from './pipes/car-filter.pipe';
+import { CarAddComponent } from './car-add/car-add.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { CarFilterPipe } from './pipes/car-filter.pipe';
     BackgroundDirective,
     MyDirectiveDirective,
     PowPipe,
-    CarFilterPipe
+    CarFilterPipe,
+    CarAddComponent,
+    CarComponent
   ],
     imports: [
         BrowserModule,

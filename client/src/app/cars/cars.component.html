@@ -82,19 +82,19 @@
 <!--<div class="app-car" *ngFor="let car of cars" [carItem]="car"></div>-->
 
 <!--подписываемся на событие-->
-<p>
-  Forms add new car
-</p>
-<hr>
-<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
-<hr>
- <button class="btn btn-warning" (click)="changeCarName()">Change name car</button>
- <button class="btn btn-danger" (click)="deleteCar()">Delete car</button>
-<hr>
+<!--<p>-->
+<!--  Forms add new car-->
+<!--</p>-->
+<!--<hr>-->
+<!--<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>-->
+<!--<hr>-->
+<!-- <button class="btn btn-warning" (click)="changeCarName()">Change name car</button>-->
+<!-- <button class="btn btn-danger" (click)="deleteCar()">Delete car</button>-->
+<!--<hr>-->
 
-<div class="list-group">
-  <app-car class="list-group-item" *ngFor="let car of cars" [carItem]="car" [name] = "car.name">
-    <h4 #carHeading class="list-group-item-heading">{{'Name:'}} {{car.name}}</h4>
-    <p class="list-group-item-text">{{'Year:'}} {{car.year}}</p>
-  </app-car>
-</div>
+<!--<div class="list-group">-->
+<!--  <app-car class="list-group-item" *ngFor="let car of cars" [carItem]="car" [name] = "car.name">-->
+<!--    <h4 #carHeading class="list-group-item-heading">{{'Name:'}} {{car.name}}</h4>-->
+<!--    <p class="list-group-item-text">{{'Year:'}} {{car.year}}</p>-->
+<!--  </app-car>-->
+<!--</div>-->

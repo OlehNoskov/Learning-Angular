@@ -1,5 +1,14 @@
 <!--<p>{{'Name:'}} {{getName()}} Year: {{carYear}}</p>-->
 <!--<p>{{'Name:'}} {{carItem.name}} Year: {{carItem.year}}</p>-->
 
-<div class="alert alert-info">This car was sell! {{name}}</div>
-<ng-content></ng-content>
+<!--<div class="alert alert-info">This car was sell! {{name}}</div>-->
+<!--<ng-content></ng-content>-->
+
+
+<div [ngClass]="getClass()">
+  <h4 [ngStyle]="{margonBottom: '20px'}">{{car.name}}</h4>
+  <div>
+    <button class="btn btn-sm btn-primary" [disabled]="car.isSold" (click)="onAction('buy')">Buy</button>
+    <button class="btn btn-sm btn-default" [disabled]="!car.isSold" (click)="onAction('return')">Return</button>
+  </div>
+</div>
