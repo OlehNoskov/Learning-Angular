@@ -11,7 +11,8 @@ import { PowPipe } from "./pipes/pow.pipe";
 import { CarFilterPipe } from './pipes/car-filter.pipe';
 import { CarAddComponent } from './car-add/car-add.component';
 import { CarService } from "./services/car.service";
-import {ConsoleService} from "./services/console.service";
+import { ConsoleService } from "./services/console.service";
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ConsoleService} from "./services/console.service";
     PowPipe,
     CarFilterPipe,
     CarAddComponent,
-    CarComponent
+    CarComponent,
+    HeroesComponent
   ],
     imports: [
         BrowserModule,
