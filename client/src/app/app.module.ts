@@ -13,6 +13,7 @@ import { CarAddComponent } from './car-add/car-add.component';
 import { CarService } from "./services/car.service";
 import { ConsoleService } from "./services/console.service";
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HeroesComponent } from './heroes/heroes.component';
     CarFilterPipe,
     CarAddComponent,
     CarComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
     imports: [
         BrowserModule,
