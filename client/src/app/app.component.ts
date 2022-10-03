@@ -146,25 +146,37 @@
 //   }
 // }
 
-import { Component, OnInit } from '@angular/core';
-import { CarService  } from "./services/car.service";
+// import { Component, OnInit } from '@angular/core';
+// import { CarService  } from "./services/car.service";
+//
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+//   //registration service in this class (1 way)
+//   // providers: [CarService]
+// })
+// export class AppComponent implements OnInit {
+//   cars = [];
+//
+//   constructor(private carService: CarService) {
+//   }
+//
+//
+//   ngOnInit(): void {
+//     // @ts-ignore
+//     this.cars = this.carService.cars;
+//   }
+// }
+
+
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  //registration service in this class (1 way)
-  // providers: [CarService]
 })
-export class AppComponent implements OnInit {
-  cars = [];
-
-  constructor(private carService: CarService) {
-  }
-
-
-  ngOnInit(): void {
-    // @ts-ignore
-    this.cars = this.carService.cars;
-  }
+export class AppComponent {
+  title = 'Tour of Heroes';
 }
