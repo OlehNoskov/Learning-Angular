@@ -58,4 +58,9 @@ Learning Angular
 
   Service Class -> главная задача - хранение данных и передавать их различным компонентам
 
+  === Commands ===
+  --flat	Puts the file in src/app instead of its own directory.
+  --module=app	Tells ng generate to register it in the imports array of the AppModule.
+
+
 
